@@ -1,3 +1,3 @@
-input_string = input("plz input data: ") # Taeji Kim
+input_string = input("plz input data: ")  # Taeji Kim
 print(input_string)
-print(len(input_string)) # 9
+print(len(input_string))  # 9
