@@ -1,0 +1,4 @@
+[tool.black]
+exclude = '''
+/day5/.*password.*
+'''
