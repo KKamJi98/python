@@ -1,5 +1,3 @@
-# Step 2
-
 import random
 import modules.hangman_art as hangman_art
 import modules.hangman_words as hangman_words
