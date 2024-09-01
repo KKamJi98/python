@@ -1,12 +1,6 @@
-# 코드 재구성
-
-# decrypt 함수 생성
+from modules.art import logo
 alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l',
             'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
-
-direction = input("Type 'encode' to encrypt, type 'decode' to decrypt:\n")
-text = input("Type your message:\n").lower()
-shift = int(input("Type the shift number:\n"))
 
 
 def caesar(text, shift_amount, direction):
@@ -33,4 +27,19 @@ def caesar(text, shift_amount, direction):
     print(f"The {direction}d text is => {result_text}")
 
 
-caesar(text, shift, direction)
+print(logo)
+
+while True:
+    direction = input("Type 'encode' to encrypt, type 'decode' to decrypt:\n")
+    text = input("Type your message:\n").lower()
+    shift = int(input("Type the shift number:\n"))
+
+    if shift > len(alphabet) - 1:
+        shift = shift % len(alphabet)
+
+    caesar(text, shift, direction)
+
+    again = input("Do you want to go again? Type 'yes' or 'no':\n").lower()
+    if again != "yes":
+        print("Good Bye!")
+        break
