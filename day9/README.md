@@ -1,3 +1,3 @@
 # blind auction
 
-![alt text](blind-auction.webp)
+![alt text](blind_auction.webp)
