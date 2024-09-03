@@ -7,5 +7,5 @@ def is_leap_year(year):
         return True
     else:
         return False
-    # Write your code here. 
+    # Write your code here.
     # Don't change the function name.

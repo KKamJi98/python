@@ -1,24 +1,25 @@
 from modules.clear import clear
 from modules.art import logo
 
+
 def add(num1, num2):
     return num1 + num2
+
 
 def subtract(num1, num2):
     return num1 - num2
 
+
 def multiply(num1, num2):
     return num1 * num2
+
 
 def divide(num1, num2):
     return num1 / num2
 
-operations = {
-    "+": add,
-    "-": subtract,
-    "*": multiply,
-    "/": divide
-}
+
+operations = {"+": add, "-": subtract, "*": multiply, "/": divide}
+
 
 def calculator():
     print(logo)
@@ -32,12 +33,15 @@ def calculator():
         result = operations[operation](num1, num2)
         print(f"{num1} {operation} {num2} = {result}")
 
-        choice = input(f"Type 'y' to continue calculating with {result}, or type 'n' to start a new calculation:" ).lower()
-        if choice == 'n':
+        choice = input(
+            f"Type 'y' to continue calculating with {result}, or type 'n' to start a new calculation:"
+        ).lower()
+        if choice == "n":
             clear()
             calculator()
         num1 = result
 
     print("Calculator is off.")
-    
+
+
 calculator()
