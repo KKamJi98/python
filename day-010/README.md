@@ -1,12 +1,9 @@
-# Blackjack
-
-![alt text](Blackjack.webp)
-
 ```shell
 .
-├── Blackjack.webp
 ├── README.md
-├── blackjack.py
+├── calculator.py
+├── format_name.py
+├── leaf_year.py
 └── modules
     ├── __pycache__
     │   ├── art.cpython-312.pyc
