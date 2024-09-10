@@ -7,12 +7,14 @@ from pandas import DataFrame
 import os
 import platform
 
+
 def clear():
-    if platform.system() == 'Windows':
-        os.system('cls')
+    if platform.system() == "Windows":
+        os.system("cls")
     else:
-        os.system('clear')
-        
+        os.system("clear")
+
+
 print(logo)
 
 df: DataFrame = read_file(relative_path="./data/data.csv")
@@ -52,10 +54,10 @@ while keep_going:
         keep_going = False
         print("Game Over")
         score -= 1
-    
+
     print(f"Left: {name_left} with {followers_left} followers")
     print(f"Right: {name_right} with {followers_right} followers")
-    
+
     if keep_going:
         print(f"Current score: {score}")
         continue_game = (
