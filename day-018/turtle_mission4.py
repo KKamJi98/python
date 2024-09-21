@@ -10,12 +10,13 @@ t.colormode(255)
 my_turtle.pensize(15)
 my_turtle.speed(5)
 
+
 def change_color() -> None:
     R: int = random.randint(0, 255)
     G: int = random.randint(0, 255)
     B: int = random.randint(0, 255)
     my_turtle.color(R, G, B)
-    
+
 
 direction = [0, 90, 180, 270]
 
