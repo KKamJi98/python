@@ -32,7 +32,7 @@ class Snake:
         self.segments.clear()
         self.create_snake()
         self.head = self.segments[0]
-        
+
     def extend(self) -> None:
         self.add_segment(self.segments[-1].position())
 

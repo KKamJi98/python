@@ -42,7 +42,6 @@ while game_is_on:
     ):
         scoreboard.reset()
         snake.reset()
-        
 
     # 꼬리와 충돌 감지 segment 중 head를 제외한 다른 segment
     for segment in snake.segments[1:]:
