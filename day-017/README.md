@@ -9,4 +9,21 @@ Class Naming Convention -> Pascal Case
 
 ## 더 많은 퀴즈
 
-https://opentdb.com/api_config.php
+<https://opentdb.com/api_config.php>
+
+```bash
+.
+├── README.md
+├── class_study.py
+└── quiz-game
+    ├── __pycache__
+    │   ├── data.cpython-312.pyc
+    │   ├── question_model.cpython-312.pyc
+    │   └── quiz_brain.cpython-312.pyc
+    ├── data.py
+    ├── main.py
+    ├── question_model.py
+    └── quiz_brain.py
+
+3 directories, 9 files
+```

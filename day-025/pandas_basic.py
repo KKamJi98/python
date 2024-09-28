@@ -47,5 +47,5 @@ print(data[data.temp == data["temp"].max()])
 # 월요일의 온도를 불러오는데 온도를 화씨로 표시
 monday = data[data.day == "Monday"]
 monday_temp = monday.temp.iloc[0]
-monday_temp_fahrenheit = monday_temp * 9/5 + 32
+monday_temp_fahrenheit = monday_temp * 9 / 5 + 32
 print(f"Monday's temperature in Fahrenheit: {monday_temp_fahrenheit:.2f}")

@@ -7,3 +7,16 @@
 ## 고차함수(higher_order_function)
 
 - 다른 함수를 인수로 받거나 함수를 반환하는 함수
+
+```bash
+❯ tree
+.
+├── README.md
+├── etch_a_sketch.py
+├── event_listener.py
+├── higher_order_function_and_event_listener.py
+├── test.py
+└── turtle_racing.py
+
+1 directory, 6 files
+```

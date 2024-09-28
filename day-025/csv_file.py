@@ -10,7 +10,7 @@ PATH = os.path.join((os.path.dirname(__file__)), "weather_data.csv")
 #     for line in temp_data:
 #         data.append(line.strip().split(","))
 #     print(data)
-    
+
 
 with open(PATH) as data_file:
     data = csv.reader(data_file)
@@ -20,4 +20,3 @@ with open(PATH) as data_file:
         if row[1].isdigit():
             temperatures.append(int(row[1]))
     print(temperatures)
-            

@@ -4,7 +4,7 @@ import os
 # PATH = os.path.join(os.path.dirname(__file__), "2018_Central_Park_Squirrel_Census_-_Squirrel_Data.csv")
 PATH = os.path.dirname(__file__)
 
-data = pandas.read_csv(PATH+"/2018_Central_Park_Squirrel_Census_-_Squirrel_Data.csv")
+data = pandas.read_csv(PATH + "/2018_Central_Park_Squirrel_Census_-_Squirrel_Data.csv")
 # primary_fur_color = data["Primary Fur Color"]
 # print(primary_fur_color)
 
@@ -18,8 +18,8 @@ black_squirrels_count = len(black_squirrels)
 
 data_dict = {
     "Fur Color": ["Gray", "Cinnamon", "Black"],
-    "Count": [grey_squirrels_count, red_squirrels_count, black_squirrels_count]
+    "Count": [grey_squirrels_count, red_squirrels_count, black_squirrels_count],
 }
 
 df = pandas.DataFrame(data_dict)
-df.to_csv(PATH+"/squirrel_count.csv")
+df.to_csv(PATH + "/squirrel_count.csv")

@@ -2,3 +2,6 @@
 
 pandas는 DataFrame과 Series로 나뉜다. DataFrame => 2차원 series => 1차원
 
+## us-state-game (미국 주 이름 맞히기)
+
+![alt text](image.png)
