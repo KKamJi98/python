@@ -21,3 +21,16 @@ new_dict = [new_key:new_value for item in list]
 # Conditional Dictionary Comprehension
 new_dict = {new_key:new_value for (key, value) in dict.items() if test}
 ```
+
+```bash
+.
+├── NATO-alphabet-start
+│   ├── main.py
+│   └── nato_phonetic_alphabet.csv
+├── README.md
+├── dictionary_comprehension.py
+├── list_comprehension.py
+└── pandas_itterrows.py
+
+2 directories, 6 files
+```
