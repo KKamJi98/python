@@ -1,0 +1,1 @@
+# Goals: 동적 타이핑, Pomodoro GUI Application 만들기

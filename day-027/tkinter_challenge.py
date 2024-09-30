@@ -14,7 +14,7 @@ button.grid(column=1, row=1)
 
 new_button = tkinter.Button()
 new_button.config(text="New Button", font=("Arial", 24, "bold"))
-button.grid(column=2, row=0)
+new_button.grid(column=2, row=0)
 
 entry = tkinter.Entry()
 entry.grid(column=3, row=2)

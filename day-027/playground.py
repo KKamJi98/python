@@ -30,6 +30,7 @@ class Car:
         self.color = kw.get("color")
         self.seats = kw.get("seats")
 
+
 # my_car = Car(make="Nissan", model="GT-R")
 my_car = Car(make="Nissan")
 print(my_car.model)
