@@ -20,12 +20,12 @@ canvas.create_image(400, 263, image=card_front_image)
 canvas.create_text(400, 150, text="Title", font=("Arial", 40, "italic"))
 canvas.create_text(400, 263, text="word", font=("Arial", 60, "bold"))
 canvas.config(bg=BACKGROUND_COLOR, highlightthickness=0)
-canvas.grid(row=0, column=0)
+canvas.grid(row=0, column=0, columnspan=2)
 
-wrong_button = Button(image=wrong_button_image)
+wrong_button = Button(image=wrong_button_image, highlightthickness=0)
 wrong_button.grid(row=1, column=0)
 
-right_button = Button(image=right_button_image)
+right_button = Button(image=right_button_image, highlightthickness=0)
 right_button.grid(row=1, column=1)
 
 window.mainloop()
