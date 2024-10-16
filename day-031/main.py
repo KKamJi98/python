@@ -18,7 +18,6 @@ current_card = {}
 to_learn = {}
 
 try:
-    # euc-kr 인코딩으로 파일 읽기
     data = pandas.read_csv(TO_LEARN_DATA_FILE_PATH, encoding="utf-8")
 except FileNotFoundError:
     original_data = pandas.read_csv(DATA_FILE_PATH, encoding="utf-8")
@@ -73,10 +72,14 @@ card_word = canvas.create_text(
 canvas.config(bg=BACKGROUND_COLOR, highlightthickness=0)
 canvas.grid(row=0, column=0, columnspan=2)
 
-wrong_button = Button(image=wrong_button_image, highlightthickness=0, command=next_card)
+wrong_button = Button(
+    image=wrong_button_image, highlightthickness=0, borderwidth=0, command=next_card
+)
 wrong_button.grid(row=1, column=0)
 
-right_button = Button(image=right_button_image, highlightthickness=0, command=is_right)
+right_button = Button(
+    image=right_button_image, highlightthickness=0, borderwidth=0, command=is_right
+)
 right_button.grid(row=1, column=1)
 
 next_card()
