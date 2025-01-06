@@ -3,3 +3,21 @@ exclude = '''
 /day5/.*password.*
 |/day8/.*
 '''
+
+[tool.poetry]
+name = "python-study"
+version = "0.1.0"
+description = ""
+authors = ["KKamJi <xowl5460@naver.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.13"
+elasticsearch = "^8.16.0"
+requests = "^2.32.3"
+selenium = "^4.27.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
