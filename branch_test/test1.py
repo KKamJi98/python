@@ -1,4 +1,4 @@
-a = 3
-b = 3
+a = 7
+b = 7
 
-print(a - b)
+print(a * b)
