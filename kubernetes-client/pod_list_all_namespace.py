@@ -5,6 +5,7 @@ import time
 from kubernetes import client, config, watch
 from tabulate import tabulate
 
+
 def main_menu():
     """메인 메뉴를 출력하고 사용자 입력을 받는다."""
     print("\n=== Kubernetes Monitoring Tool ===")
@@ -16,6 +17,7 @@ def main_menu():
     print("6) Watch Events (real-time)")
     print("Q) Quit")
     return input("Select an option: ").strip()
+
 
 def list_nodes():
     """노드 목록을 tabulate로 깔끔하게 출력."""
@@ -32,6 +34,7 @@ def list_nodes():
     print("\n[Nodes]")
     print(tabulate(table, headers=["Name", "CPU", "Memory"], tablefmt="github"))
 
+
 def list_pods():
     """파드 목록을 tabulate로 깔끔하게 출력."""
     v1 = client.CoreV1Api()
@@ -47,7 +50,14 @@ def list_pods():
         table.append([ns, name, phase, restarts])
 
     print("\n[Pods]")
-    print(tabulate(table, headers=["Namespace", "Pod Name", "Phase", "Restarts"], tablefmt="github"))
+    print(
+        tabulate(
+            table,
+            headers=["Namespace", "Pod Name", "Phase", "Restarts"],
+            tablefmt="github",
+        )
+    )
+
 
 def list_deployments():
     """디플로이먼트 목록을 tabulate로 출력."""
@@ -60,7 +70,10 @@ def list_deployments():
         replicas = f"{d.status.ready_replicas or 0}/{d.spec.replicas}"
         table.append([ns, name, replicas])
     print("\n[Deployments]")
-    print(tabulate(table, headers=["Namespace", "Name", "Ready/Total"], tablefmt="github"))
+    print(
+        tabulate(table, headers=["Namespace", "Name", "Ready/Total"], tablefmt="github")
+    )
+
 
 def list_daemonsets():
     """데몬셋 목록"""
@@ -74,7 +87,12 @@ def list_daemonsets():
         ready = ds.status.number_ready
         table.append([ns, name, f"{ready}/{desired}"])
     print("\n[DaemonSets]")
-    print(tabulate(table, headers=["Namespace", "Name", "Ready/Desired"], tablefmt="github"))
+    print(
+        tabulate(
+            table, headers=["Namespace", "Name", "Ready/Desired"], tablefmt="github"
+        )
+    )
+
 
 def list_statefulsets():
     """스테이트풀셋 목록"""
@@ -87,7 +105,10 @@ def list_statefulsets():
         replicas = f"{sts.status.ready_replicas or 0}/{sts.spec.replicas}"
         table.append([ns, name, replicas])
     print("\n[StatefulSets]")
-    print(tabulate(table, headers=["Namespace", "Name", "Ready/Total"], tablefmt="github"))
+    print(
+        tabulate(table, headers=["Namespace", "Name", "Ready/Total"], tablefmt="github")
+    )
+
 
 def watch_events():
     """이벤트를 실시간으로 감시하여 콘솔에 표시."""
@@ -101,10 +122,15 @@ def watch_events():
             ns = evt_obj.metadata.namespace
             reason = evt_obj.reason
             message = evt_obj.message
-            involved = evt_obj.involved_object.kind + "/" + (evt_obj.involved_object.name or "")
+            involved = (
+                evt_obj.involved_object.kind
+                + "/"
+                + (evt_obj.involved_object.name or "")
+            )
             print(f"* [{ns or 'cluster'}] {reason}: {message} (involved: {involved})")
     except KeyboardInterrupt:
         print("\nStopped watching events.")
+
 
 def main():
     # kubeconfig 로드 (로컬 환경)
@@ -130,6 +156,6 @@ def main():
         else:
             print("Invalid choice. Please try again.")
 
+
 if __name__ == "__main__":
     main()
-
