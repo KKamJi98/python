@@ -22,6 +22,11 @@ tabulate = "^0.9.0"
 openpyxl = "^3.1.5"
 pandas = "^2.2.3"
 boto3 = "^1.37.21"
+fastapi = "^0.115.12"
+uvicorn = "^0.34.2"
+logging = "^0.4.9.6"
+rich = "^14.0.0"
+pydantic = {extras = ["email"], version = "^2.11.5"}
 
 
 [build-system]
