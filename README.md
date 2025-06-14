@@ -8,6 +8,7 @@ This repository contains various Python study materials, examples, and projects 
 - **fluent-python**: Code examples and exercises from "Fluent Python" book
 - **kubernetes-client**: Python client for Kubernetes API
 - **prometheus-client**: Python client for Prometheus monitoring
+- **test_fast_api**: FastAPI CRUD application with SQLite and testing examples
 - **z-udemy**: Python exercises and projects from Udemy courses
 
 ## Example Files
